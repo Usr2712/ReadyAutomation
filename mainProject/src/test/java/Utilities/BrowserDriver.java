@@ -4,19 +4,19 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 import java.util.Arrays;
 
-import static Utilities.ReusableMethods.getProp;
+
 import static Utilities.ReusableMethods.threadSleep;
 
 public class BrowserDriver {
 
 
-    static Props prop = new Props();
     public static WebDriver driver;
     public static WebDriverWait webDriverWait;
     public static ChromeOptions options;
@@ -27,12 +27,12 @@ public class BrowserDriver {
 
     public static void launchBrowserAndNavigateToUrl() {
        // driver = new ChromeDriver(getChromeOptions());
-        WebDriverManager.chromedriver().setup();
-        driver=new ChromeDriver();
+        WebDriverManager.edgedriver().setup();
+        driver=new EdgeDriver();
         driver.manage().window().maximize();
         threadSleep(6000);
 
-          String url =getProp("url");// Fetching the URL
+          String url =Props.getProp("url");// Fetching the URL
 
         if (url == null || url.isEmpty()) {
             throw new NullPointerException("URL is null! Check properties file.");

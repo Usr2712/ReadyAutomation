@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import static Utilities.GlobalVariables.Context.Vegetablename;
 import static Utilities.GlobalVariables.ScenarioContext.setContext;
+import static Utilities.Props.getProp;
 import static Utilities.ReusableMethods.*;
 
 public class LoginPage {

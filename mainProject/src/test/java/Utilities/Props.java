@@ -33,6 +33,13 @@ public class Props {
 
         env = environmentProps.getProperty("env");
     }
+    public static String getProp(String propertyName) {
 
+
+        return properties.getProperty(propertyName);
+
+
+
+    }
 
 }

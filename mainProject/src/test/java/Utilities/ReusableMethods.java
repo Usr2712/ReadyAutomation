@@ -336,18 +336,14 @@ public class ReusableMethods {
     }
 
 
-    public static String getProp(String propertyName) {
+   /* public static String getProp(String propertyName) {
 
-        if (properties == null) {
-            System.out.println("Properties file is not loaded!");
-            System.out.println("Loaded Properties: " + properties);
-            return null;
-        }
+
        return properties.getProperty(propertyName);
 
 
 
-    }
+    }*/
 
     public static void deleteRequiredFolder(String path) throws IOException {
         String filePath = System.getProperty("user.dir") + path;
